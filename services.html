@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bethsaida Eye Center</title>
+
+    <script src="assets/js/jquery-3.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid" id="navigation">
+                        <h4 style="color: white; margin: 2%;padding: 0;font-size: 18px small; font-weight: 200;">Bethsaida Eye Centre</h4>
+                 <ul class="nav navbar-nav" id="info-links">
+                        <li class="btn btn-primary active"><a style="color: greenyellow; font-size: 12px; font-weight: 200" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                 </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                        <!-- <li><button type="button" class="btn btn-default" id="btnBookAppointment" style="font-weight:200; font-size: 12px">Book An Appointment</button></li> -->
+
+                        <!-- Button trigger modal -->
+                   <li> <button type="button" class="btn btn-default" id="btnBookAppointment" data-toggle="modal" data-target="#exampleModalRegister" style="font-weight:200; font-size: 12px">
+                        Book An Appointment
+                       </button></li>
+
+                       <!-- modal -->
+                <div class="modal fade" id="exampleModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header" style="background-color: rgb(110, 110, 255);">
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="color:white">Book from here...</h5>
+                               <!-- <button type="button" class="btn btn-light" data-dismiss="modal" style="float: right;margin-left: 40%">Login</button> -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <!-- Booking form -->
+                            <form action="/bookAnAppointment" onsubmit="bookAppointment()" role="form" name="patient-bookings" method="POST" style="width:50% auto">
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="firstName" id="fName" placeholder="enter your first name..." autocomplete="off"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="lastName" id="lName" placeholder="enter your last name..." autocomplete="off"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="email" class="form-control" name="emailAddress" id="eAddress" placeholder="enter your email address..." autocomplete="off"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="tel" class="form-control" name="phoneNumber" id="pNumber" minlength="10" maxlength="10" placeholder="enter your phone number..." autocomplete="off"/>
+                              </div>
+                              <div class="form-group">
+                                  <select class="form-control" name="yourRegion" id="region">
+                                      <option value="default" selected>Select Region...</option>
+                                      <option value="Western">Western</option>
+                                      <option value="Nyanza">Nyanza</option>
+                                      <option value="Nairobi">Nairobi</option>
+                                      <option value="Eastern">Eastern</option>
+                                      <option value="Coast">Coast</option>
+                                  </select>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="yourAge" id="age" min="1" max="200" placeholder="enter your age..." autocomplete="off"/>
+                              </div>
+                              <div class="form-group" id="gender">
+                                  Gender:
+                                  Male <input type="radio" name="yourGender" id="male" value="Male" checked="checked" style="margin: 0 2%">
+                                  Female <input type="radio" name="yourGender" id="female" value="Female"  style="margin: 0 2%">
+                                  <!-- Other    <input type="radio" name="yourGender"  id="other" value="Other" style="margin: 0.2%"> -->
+                              </div>
+                              <div class="modal-footer" style="background-color:whitesmoke">
+                                  <button type="submit" onclick="bookAppointment()" class="btn btn-success">Submit Appointment</button>
+                                </div>
+                          </form>
+                          <!-- end booking form -->
+                            </div>
+                            <!-- <div class="modal-footer">
+                              <button type="submit" onclick="bookAnAppointment()" class="btn btn-success">Submit Appointment</button>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end modal -->
+
+                   </ul>
+                   <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="images/michael-c-liv4zvEGsSM-unsplash.jpg" alt="image-logo"><br>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- End navigation -->
+
+    <!-- MAIN -->
+    <main class="mt-0">
+
+       <!-- Container -->
+       <div class="container" id="body-container-middle">
+            <div class="row" id="infoContainer">
+                <div class="jumbotron col-md-12 col-sm-12" id="jumbotron">
+                                <h1 style="text-align: center; margin:0 0 1% 0;padding: 0;text-shadow:  2px 2px 4px #2a2a2a">Visit</h1>
+                    <p>
+                    What is Lorem Ipsum?
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+
+                    </p>
+                    <hr class="hr-light">
+                </div>
+
+                <h4 style="text-align:center" id="serviceName">1.Eye Examination</h4>
+                  <div class="row justify-content" id="Services">
+                       <div class="col-md-6" style="float: left">
+                               <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                       What is Lorem Ipsum?
+
+                                       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                       when an unknown printer took a galley of type and scrambled it to make a type
+
+                               </p>
+                       </div>
+                       <div class="col-md-4" style="float: left">
+                           <img src="images/doctors.jpg" alt="doctors"  style="margin:0; width:90%; height: 90%">
+                       </div>
+                  </div>
+
+                    <div class="row justify-content" id="Services">
+                    <div class="col-md-4" style="float: left">
+                        <img src="images/scientist-writes-the-research-result.jpg" alt="doctors"  style="margin:0; width:90%; height: 90%">
+                    </div>
+                    <div class="col-md-6" style="float: left">
+                        <h4 style="text-align:left" id="serviceName2">2. Refraction and Spectacles Prescription</h4>
+                            <p style="font-size: 12px; font-weight: 200;word-spacing: 5px;margin:0% 3%; padding: 0 1%">
+                                    What is Lorem Ipsum?
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+
+                            </p>
+                    </div>
+                </div>
+               <h4 style="text-align:center" id="serviceName">3. Minor and Major Surgeries</h4>
+               <div class="row justify-content" id="Services">
+                    <div class="col-md-6" style="float: left">
+                            <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                    What is Lorem Ipsum?
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+
+                            </p>
+                    </div>
+                    <div class="col-md-4" style="float: left">
+                        <img src="images/doctors-in-safe-hands.jpg" alt="doctors"  style="margin:0; width:90%; height: 90%">
+                    </div>
+               </div>
+
+               <div class="row justify-content" id="Services">
+                    <div class="col-md-4" style="float: left">
+                        <img src="images/confident-doctor-in-operating-room.jpg" alt="doctors" style="margin:0; width:90%; height: 90%">
+                    </div>
+                    <div class="col-md-6" style="float: left">
+                        <h4 style="text-align:left" id="serviceName2">4. General Procedures like:</h4>
+                        <ol style="font-size: 12px; font-weight: 200;word-spacing: 5px; margin:0% 3%; padding: 0 1%">
+                                <li>Fundoscopy</li>
+                                <li>Fundus Photo</li>
+                                <li>Visual Fields</li>
+                                <li>Yag laser</li>
+                                <li>Avastin Insection</li>
+                            </ol>
+                            <br>
+                                    <p style="font-size: 12px; font-weight: 200;word-spacing: 5px; margin:0% 3%; padding: 0 1%">
+                                    What is Lorem Ipsum?
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+
+                            </p>
+                    </div>
+               </div>
+            </div>
+         </div>
+         <hr class="hr-light">
+       </div>
+       <!-- End container -->
+
+       <!-- Footer -->
+       <div class="container-fluid" id="footerContainer">
+            <div class="row" id="footerContent">
+                <div class="col-md-3 col-sm-3">
+                        <h5 class="card-title" style="font-size: 16px; font-weight:300;">Imagine Health</h5>
+                        <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                What is Lorem Ipsum?
+
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+                        </p>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                        <h5 class="card-title" style="font-size: 16px; font-weight:300;">Imagine Health</h5>
+                        <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                What is Lorem Ipsum?
+
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+                        </p>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                        <h5 class="card-title" style="font-size: 16px; font-weight:300;">Imagine Health</h5>
+                        <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                What is Lorem Ipsum?
+
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+                        </p>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                        <h5 class="card-title" style="font-size: 16px; font-weight:300;">Imagine Health</h5>
+                        <p style="font-size: 12px; font-weight: 200;word-spacing: 5px">
+                                What is Lorem Ipsum?
+
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+                        </p>
+                </div>
+
+                <a type="button" href="#navigation" class="btn btn-primary" role="button" value="Back to top"
+                style=" background-color: indigo; width: 100px; height: 40px;margin: 1%; color: white">Back to top</a>
+            </div>
+            <small><p class="mt-5 container text-center" style="color: greenyellow">Copyright &copy Bethsaida Eye Centre</p></small>
+       </div>
+       <!-- End Footer -->
+    </main>
+    <!-- END MAIN -->
+
+
+    <!-- SCRIPT CODE -->
+    <script type="text/javascript" src="main.js"></script>
+    <!-- End SCRIPT CODE -->
+
+
+</body>
+</html>

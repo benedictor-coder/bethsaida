@@ -1,0 +1,195 @@
+*{
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ overflow: hidden;
+}
+html, body{
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0%;
+    margin: 0%;
+    background: whitesmoke;
+    font-family: 'poppins', sans-serif;
+}
+.navbar-default{
+    /* background-color: rgb(76, 76, 255); */
+    background-color: rgb(110, 110, 255);
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+#btnBookAppointment:hover{
+    background-color: whitesmoke;
+    color: blue;
+}
+#logo{
+    widows: 200px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 0%;
+    margin: 0%;
+}
+ul li{
+    padding: 10px;
+    margin: 0;
+    display: inline;
+    font-size: 12px;
+    font-weight: 200;
+}
+ul li a{
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+li>a:hover{
+    color: greenyellow;
+    text-decoration: none;
+}
+#info-links{
+    display: inline;
+    margin: 0%;
+    padding: 0%;
+}
+#welcomeContainer{
+    width: 100%;
+    height: auto;
+}
+#gender{
+    font-size: 12px;
+    font-weight: 100;
+    opacity: 0.8;
+    padding: 0%;
+    justify-content: center;
+}
+#welcomeMessage{
+    color: black;
+    font-weight: 100;
+}
+#partnersLogos{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+#logo1,#logo2,#logo3,#logo4{
+    margin: 0 10px;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 500px;
+}
+#slideContainer{
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    margin: 0% auto;
+}
+#carouselExampleCaptions>{
+    width: 100%;
+    height: 400px;
+    margin: 0%;
+    padding: 0%;
+}
+#body-container-middle{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+}
+#infoContainer{
+    background-color: white;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
+div.jumbotron>p{
+    font-size: 12px;
+    font-weight: 200;
+    word-spacing: 5px;
+}
+#cards{
+    width: 100%;
+    height: auto;
+    margin: 0% auto;
+    padding: 0% auto;
+    justify-content: center;
+}
+div.card-body:hover{
+    color: white;
+    background-color: rgb(110, 110, 255);
+    border-radius: 2px;
+    margin: 0;
+}
+#btnReadMore{
+    width: 100%;
+    height: 30px;
+    margin: 0%;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 200;
+}
+#btnReadMore:hover{
+ background-color: #ccc;
+}
+/* Servicess */
+#Services{
+    margin: 0% 2%;
+    padding: 0% 0% 0 13%;
+}
+#serviceName{
+    margin: 1% 15%;
+    padding: 0%;
+    font-size: 16px;
+    font-weight:300;
+}
+#serviceName2{
+    margin: 2% 0%;
+    padding: 0%;
+    font-size: 16px;
+    font-weight:300;
+}
+/* contact form */
+#contactForm{
+    width: 100%;
+    margin: 2% 10%;
+    padding: 1;
+    height: auto;
+}
+.map-container-7{
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0%;
+}
+.map-container-7 iframe{
+    left: 0%;
+    top: 0%;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+}
+.form-control{
+    font-size: 12px;
+    font-weight: 300;
+}
+#footerContainer{
+    /* background: #2a2a2a; */
+    background-image: url(images/mac.png);
+    width: 100%;
+    height: auto;
+    color: white;
+}
+#footerContent{
+    margin: 2%;
+    padding: 2%;
+}
+input:focus{
+  font-weight: bolder;
+}
+select:focus{
+  font-weight: bolder;
+}
